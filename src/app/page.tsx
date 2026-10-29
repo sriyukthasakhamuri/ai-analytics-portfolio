@@ -2,6 +2,26 @@ import Image from "next/image";
 
 const projects = [
   {
+  title: "Enterprise Agentic RAG",
+  description:
+    "Multi-agent enterprise analytics assistant combining semantic retrieval, SQL analytics, Redis memory, grounded LLM generation, evaluation, and self-correction.",
+  stack:
+    "Python • LangGraph • Qdrant • SQLite • Redis • FastAPI • Ollama • Streamlit",
+  github:
+    "https://github.com/sriyukthasakhamuri/enterprise-agentic-rag",
+  image: "/projects/enterprise-agentic-rag.png",
+},
+{
+  title: "CI LLM Guardrail & Evaluation Engine",
+  description:
+    "Automated LLM safety and governance pipeline using NeMo Guardrails and GitHub Actions to evaluate jailbreaks, secret extraction, policy compliance, and safety regressions.",
+  stack:
+    "Python • NeMo Guardrails • Ollama • GitHub Actions • LLM Evaluation • CI/CD",
+  github:
+    "https://github.com/sriyukthasakhamuri/ci-llm-guardrail-evaluation",
+  image: "/projects/ci-llm-guardrail.png",
+},
+  {
     title: "InsightPilot AI Analytics",
     description:
       "Agentic AI analytics platform for customer churn intelligence, risk scoring, explainability, semantic retrieval, and business-facing AI insights.",
