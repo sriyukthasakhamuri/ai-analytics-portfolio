@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import Hero from "./components/Hero";
 
 const projects = [
   {
@@ -9,6 +11,7 @@ const projects = [
     "Python • LangGraph • Qdrant • SQLite • Redis • FastAPI • Ollama • Streamlit",
   github:
     "https://github.com/sriyukthasakhamuri/enterprise-agentic-rag",
+  href: "/projects/enterprise-agentic-rag",
   image: "/projects/enterprise-agentic-rag.png",
 },
 {
@@ -19,6 +22,7 @@ const projects = [
     "Python • NeMo Guardrails • Ollama • GitHub Actions • LLM Evaluation • CI/CD",
   github:
     "https://github.com/sriyukthasakhamuri/ci-llm-guardrail-evaluation",
+  href: "/projects/ci-llm-guardrail",
   image: "/projects/ci-llm-guardrail.png",
 },
   {
@@ -29,6 +33,7 @@ const projects = [
       "Python • FastAPI • LangGraph • Ollama • PostgreSQL • Machine Learning • RAG",
     github:
       "https://github.com/sriyukthasakhamuri/insightpilot-ai-analytics",
+    href: "/projects/insightpilot-ai-analytics",
     image: "/projects/insightpilot-dashboard.png",
   },
   {
@@ -39,6 +44,7 @@ const projects = [
       "Python • Kafka • PostgreSQL • FastAPI • Streamlit • Docker • Ollama",
     github:
       "https://github.com/sriyukthasakhamuri/streamsight-real-time-ai",
+    href: "/projects/streamsight-real-time-ai",
     image: "/projects/streamsight-dashboard.png",
   },
   {
@@ -49,6 +55,7 @@ const projects = [
       "Python • SQL • DuckDB • Power BI • Analytics Engineering",
     github:
       "https://github.com/sriyukthasakhamuri/accenture-retail-control-tower",
+    href: "/projects/retail-analytics-control-tower",
     image: "/projects/retail-control-tower.png",
   },
 ];
@@ -92,43 +99,7 @@ export default function Home() {
       </header>
 
       {/* Home */}
-      <section
-        id="home"
-        className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-20 pt-28"
-      >
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-400">
-          AI • Analytics • Engineering
-        </p>
-
-        <h1 className="max-w-4xl text-5xl font-bold leading-tight sm:text-6xl md:text-7xl">
-          Building intelligent data products that turn real-time data into
-          decisions.
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-          I build AI-powered analytics systems, real-time data pipelines,
-          machine learning solutions, and business intelligence applications
-          using Python, SQL, Kafka, FastAPI, PostgreSQL, Power BI, and LLMs.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="rounded-full bg-white px-6 py-3 font-medium text-black transition hover:bg-zinc-200"
-          >
-            View Projects
-          </a>
-
-          <a
-            href="https://github.com/sriyukthasakhamuri"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-zinc-700 px-6 py-3 font-medium transition hover:border-white"
-          >
-            GitHub
-          </a>
-        </div>
-      </section>
+<Hero />
 
       {/* Projects */}
       <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
@@ -175,17 +146,27 @@ export default function Home() {
                 {project.stack}
               </p>
 
-              <div className="mt-auto pt-7">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-medium text-white hover:text-zinc-300"
-                >
-                  View on GitHub
-                  <span>↗</span>
-                </a>
-              </div>
+              <div className="mt-auto flex flex-wrap gap-4 pt-7">
+            {project.href && (
+             <Link
+             href={project.href}
+             className="inline-flex items-center gap-2 font-medium text-white hover:text-zinc-300"
+             >
+             View Case Study
+              <span>↗</span>
+           </Link>
+         )}
+
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 font-medium text-white hover:text-zinc-300"
+  >
+    View on GitHub
+    <span>↗</span>
+  </a>
+</div>
             </article>
           ))}
         </div>
