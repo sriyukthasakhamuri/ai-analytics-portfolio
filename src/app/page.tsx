@@ -58,6 +58,17 @@ const projects = [
     href: "/projects/retail-analytics-control-tower",
     image: "/projects/retail-control-tower.png",
   },
+  {
+    title: "Production ML Risk Prediction Platform",
+    description:
+       "End-to-end ML and MLOps platform for churn-risk prediction with experiment tracking, real-time inference, drift monitoring, automated retraining, Docker, and CI/CD.",
+    stack:
+      "Python • scikit-learn • MLflow • FastAPI • Evidently • Docker • GitHub Actions",
+    github:
+      "https://github.com/sriyukthasakhamuri/production-ml-risk-platform",
+    href: "/projects/production-ml-risk-platform",
+    image: "/projects/production-ml-risk-platform.png",
+  },
 ];
 
 export default function Home() {
