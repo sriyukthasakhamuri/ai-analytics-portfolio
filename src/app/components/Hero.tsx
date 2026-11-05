@@ -39,9 +39,9 @@ type Mode = keyof typeof modes;
 
 const metricCards = [
   {
-    value: "5",
+    value: "6",
     label: "Project Case Studies",
-    detail: "AI, analytics, real-time systems, and LLM safety",
+    detail: "AI, ML/MLOps, analytics, real-time systems, and LLM safety",
     href: "/#projects",
   },
   {
